@@ -48,3 +48,10 @@ repos:
     rev: v0.761
     hooks:
     -   id: mypy
+-   repo: local
+    hooks:
+    -   id: travis-lint
+        name: travis-lint
+        language: ruby
+        entry: travis lint -x
+        files: .travis.yml

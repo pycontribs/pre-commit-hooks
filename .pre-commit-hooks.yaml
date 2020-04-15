@@ -192,3 +192,10 @@
     language: python
     types: [text]
     stages: [commit, push, manual]
+# Extra hooks not included in upstream version for various reasons.
+-   id: travis-lint
+    name: travis-lint
+    language: ruby
+    entry: travis lint -x
+    files: .travis.yml
+    additional_dependencies: ['travis']
